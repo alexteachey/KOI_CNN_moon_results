@@ -29,7 +29,7 @@ The main (only?) file in this repository is our summary report of vetting 3223 K
 
 9. **orig_frac_wmoons** -- the number above divided by the total number of transits vetted.
 
-10. **nmoons_agth** -- the number of moon classifications for which the "agreement metric" was above our specified threshold (detailed in the paper, this is how well the CNN ensemble agrees on a classification).
+10. **nmoons_agth** -- the number of moon classifications for which the "agreement metric" was above our specified threshold (detailed in the paper, this is how well the CNN ensemble agrees on a classification). Less than or equal to "orig_nmoons", since some or all original classifications may meet the agreement threshold.
 
 11. **frac_wmoons_agth** -- the number above divided by the number of transits vetted.
 
