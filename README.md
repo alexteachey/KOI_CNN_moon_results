@@ -12,20 +12,35 @@ We decided to apply this tool to the *Kepler* data to search for exomoon signals
 The main (only?) file in this repository is our summary report of vetting 3223 KOIs with our neural network ensemble. Here's a breakdown of the columns:
 
 1. **KOI** -- the planet in question. Should be self-explanatory.
+
 2. **disposition** -- "CONFIRMED" or "CANDIDATE" based on the NASA Exoplanet Archive designation at runtime.
+
 3. **period** -- orbital period in days, as reported by NASA Exoplanet Archive at runtime.
+
 4. **ntransits** -- the number of transits vetted. This may or may not be the number of transits the planet actually displays in the *Kepler* data. If a transit didn't meet our criteria, it wasn't vetted.
+
 5. **ncontams** -- the number of transit windows that were contaminated by the transit of a neighboring planet (can be nonzero for multiplanet systems). As detailed in the paper, these contaminating transits were removed with a mask and replace methodology. Nevertheless, they are documented here.
+
 6. **nmadfailed** -- the number of transit windows that failed the Median Absolute Deviation (MAD) test (described in the paper) for detecting stellar / instrumental variability that might have been insufficiently detrended.
+
 7. **nexcluded** -- equals zero for all systems. The generating code allowed for excluding transits with contaminants and/or systems that failed the MAD test. For this run, we did not exclude such systems. Therefore, systems having a moon detection but that also failed many MAD tests should be viewed with some skepticism.
+
 8. **orig_nmoons** -- the number of transits vetted that were classified as showing a moon feature. What does "original" mean? See below, and / or read the paper :)
+
 9. **orig_frac_wmoons** -- the number above divided by the total number of transits vetted.
+
 10. **nmoons_agth** -- the number of moon classifications for which the "agreement metric" was above our specified threshold (detailed in the paper, this is how well the CNN ensemble agrees on a classification).
+
 11. **frac_wmoons_agth** -- the number above divided by the number of transits vetted.
+
 12. **agth** -- we set an agreement threshold of 0.95 for this run.
+
 13. **median_agreement** -- the median agreement metric across all the transits that were vetted.
-14. **fp_nexcluded** -- the number of false positive test light curves that were rejected (zero for all systems)
+
+14. **fp_nexcluded** -- the number of false positive test light curves that were rejected (zero for all systems).
+
 15. **fp_median_agreement** -- the median agreement metric across all the transits vetted in the false positive test run.
+
 16. **FP_rate** -- the fraction of false positive test runs that erroneously resulted in a moon classification. 
 
 
