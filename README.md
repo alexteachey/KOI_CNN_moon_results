@@ -45,11 +45,11 @@ The main (only?) file in this repository is our summary report of vetting 3223 K
 
 
 ## Caveats
-If you have one takeaway from this paper / result, it should be this: *These classifications should not be casually interpreted as evidence for the presence of an exomoon.* As we detail in the paper, there is a sizeable fraction of these systems that our code suggests show evidence of a moon, and the training and validation of the CNN ensemble suggests we're doing a pretty good job with these classifications. But can we use this inferences about the exomoon population? Maybe, but be careful. Can we say a moon is present based on this CNN classification? Again, be careful.
+If you have one takeaway from this paper / result, it should be this: *These classifications should not be casually interpreted as evidence for the presence of an exomoon.* As we detail in the paper, there is a sizeable fraction of these systems that our code suggests show evidence of a moon, and the training and validation of the CNN ensemble suggests we're doing a pretty good job with these classifications. But what does that mean exactly? Can we use this to make inferences about the exomoon population? Maybe, but be careful with that line of thinking. Can we say a moon is present based on this CNN classification? Again, be careful. This is just one tool.
 
-The purpose of developing this CNN ensemble classifier was to rapidly identify systems that deserve further scrutiny, that is, running them through a battery of more rigorous tests and close examination to see if the exomoon hypothesis holds water. As we describe in the paper, we pulled out 9 systems for further analysis, and only a few of them emerged as potentially viable. We stopped short of naming any of these systems new "candidate" exomoons (a fraught term).
+The purpose of developing this CNN ensemble classifier was to rapidly identify systems that deserve further scrutiny, that is, worthy of running them through a battery of more rigorous tests and closer examination of their physical characteristics to see if the exomoon hypothesis holds water. As we describe in the paper, we pulled out 9 systems for further analysis, and only a few of them emerged as potentially viable. We stopped short of naming any of these systems new "candidate" exomoons (a fraught term).
 
-So anyway, please be careful with your interpretation of these results. Ideally they would be used to zero in on systems you might find interesting for closer examination. I hope it's useful.
+So anyway, please be careful with your interpretation of these results. Ideally they would be used to zero in on systems you might find interesting for closer examination. If nothing else, it's just a record of what we did in this paper. I hope it's useful.
 
 
 ## Citation
