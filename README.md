@@ -41,7 +41,7 @@ The main (only?) file in this repository is our summary report of vetting 3223 K
 
 15. **fp_median_agreement** -- the median agreement metric across all the transits vetted in the false positive test run.
 
-16. **FP_rate** -- the fraction of false positive test runs that erroneously resulted in a moon classification. 
+16. **FP_rate** -- the fraction of false positive test runs that erroneously resulted in a moon classification. NOTE that the FP rate quoted is based on the *agreement metric*. That is, if a FP test light curve was classified as having a moon, but without meeting the agreement threshold, it was reclassified as "no moon". Since we rely on the agreement metric for our classifications, this is the number we are most interested in: how often do we falsely identify a moon to high confidence?
 
 
 ## Caveats
