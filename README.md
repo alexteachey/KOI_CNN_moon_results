@@ -1,6 +1,6 @@
 # KOI CNN vetting results
 
-Welcome! If you're viewing this page, you've probably read our paper, "Identification of Candidate Exomoon Signals with Convolutional Neural Networks" (Teachey & Kipping 2020, *submitted to MNRAS*). The repository hosts the results of our vetting of 3223 KOIs (confirmed and candidate planets) in search of exomoon signals.
+Welcome! If you're viewing this page, you've probably read our paper, "Identification of Candidate Exomoon Signals with Convolutional Neural Networks" (Teachey & Kipping 2021, *submitted to MNRAS*). The repository hosts the results of our vetting of 1880 KOIs (confirmed and candidate planets) with periods >= 10 days in search of exomoon signals.
 
 ## Background
 Convolutional Neural Networks have proven to be effective tools in analyzing large volumes of time domain photometry in search of candidate planet signals, and distinguishing between genuine planets and false positive scenarios.
@@ -17,13 +17,13 @@ The main (only?) file in this repository is our summary report of vetting 3223 K
 
 3. **period** -- orbital period in days, as reported by NASA Exoplanet Archive at runtime.
 
-4. **ntransits** -- the number of transits vetted. This may or may not be the number of transits the planet actually displays in the *Kepler* data. If a transit didn't meet our criteria, it wasn't vetted.
+4. **ntransits** -- the number of transits vetted *minus* the number of transits excluded (likely for failure of the MAD test). This may or may not be the number of transits the planet actually displays in the *Kepler* data. If a transit didn't meet our criteria, it wasn't vetted.
 
 5. **ncontams** -- the number of transit windows that were contaminated by the transit of a neighboring planet (can be nonzero for multiplanet systems). As detailed in the paper, these contaminating transits were removed with a mask and replace methodology. Nevertheless, they are documented here.
 
 6. **nmadfailed** -- the number of transit windows that failed the Median Absolute Deviation (MAD) test (described in the paper) for detecting stellar / instrumental variability that might have been insufficiently detrended.
 
-7. **nexcluded** -- equals zero for all systems. The generating code allowed for excluding transits with contaminants and/or systems that failed the MAD test. For this run, we did not exclude such systems. Therefore, systems having a moon detection but that also failed many MAD tests should be viewed with some skepticism.
+7. **nexcluded** -- The number of systems left out of the vetting. For this run, systems that failed the MAD test were excluded.
 
 8. **orig_nmoons** -- the number of transits vetted that were classified as showing a moon feature. What does "original" mean? See below, and / or read the paper :)
 
@@ -45,11 +45,7 @@ The main (only?) file in this repository is our summary report of vetting 3223 K
 
 
 ## Caveats
-If you have one takeaway from this paper / result, it should be this: *These classifications should not be casually interpreted as evidence for the presence of an exomoon.* As we detail in the paper, there is a sizeable fraction of these systems that our code suggests show evidence of a moon, and the training and validation of the CNN ensemble suggests we're doing a pretty good job with these classifications. But what does that mean exactly? Can we use this to make inferences about the exomoon population? Maybe, but be careful with that line of thinking. Can we say a moon is present based on this CNN classification? Again, be careful. This is just one tool.
-
-The purpose of developing this CNN ensemble classifier was to rapidly identify systems that deserve further scrutiny, that is, worthy of running them through a battery of more rigorous tests and closer examination of their physical characteristics to see if the exomoon hypothesis holds water. As we describe in the paper, we pulled out 9 systems for further analysis, and only a few of them emerged as potentially viable. We stopped short of naming any of these systems new "candidate" exomoons (a fraught term).
-
-So anyway, please be careful with your interpretation of these results. Ideally they would be used to zero in on systems you might find interesting for closer examination. If nothing else, it's just a record of what we did in this paper. I hope it's useful.
+If you have one takeaway from this paper / result, it should be this: *These classifications should not be casually interpreted as evidence for the presence of an exomoon.* We also caution against making strong inferences about the occurrence rate of exomoons based on these results. They may be indicative of a low occurrence rate, but we consider such a conclusion to be premature based on these results alone. Ideally they would be used to zero in on systems you might find interesting for closer examination. If nothing else, it's just a record of what we did in this paper. I hope it's useful.
 
 
 ## Citation
