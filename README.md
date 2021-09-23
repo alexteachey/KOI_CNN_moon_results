@@ -1,11 +1,11 @@
 # KOI CNN vetting results
 
-Welcome! If you're viewing this page, you've probably read our paper, "Identification of Candidate Exomoon Signals with Convolutional Neural Networks" (Teachey & Kipping 2021, *submitted to MNRAS*). The repository hosts the results of our vetting of 1880 KOIs (confirmed and candidate planets) with periods >= 10 days in search of exomoon signals.
+Welcome! If you're viewing this page, you've probably read our paper, "Identification of Candidate Exomoon Signals with Convolutional Neural Networks" (Teachey & Kipping 2021, accepted to MNRAS). The repository hosts the results of our vetting of 1880 KOIs (confirmed and candidate planets) with periods >= 10 days in search of exomoon signals.
 
 ## Background
 Convolutional Neural Networks have proven to be effective tools in analyzing large volumes of time domain photometry in search of candidate planet signals, and distinguishing between genuine planets and false positive scenarios.
 
-We decided to apply this tool to the *Kepler* data to search for exomoon signals. All the gory details about how we went about generating the training set, and validated the performance of the neural network ensemble, can be found in the paper (will link it when it's public).
+We decided to apply this tool to the *Kepler* data to search for exomoon signals. All the gory details about how we went about generating the training set, and validated the performance of the neural network ensemble, can be found in the paper: https://ui.adsabs.harvard.edu/abs/2021arXiv210910503T/abstract 
 
 
 ## About this resource
@@ -49,5 +49,5 @@ If you have one takeaway from this paper / result, it should be this: *These cla
 
 
 ## Citation
-The paper isn't yet online, but when it is, we will provide the citation here. If you find this work useful, we would appreciate your giving us a shoutout in the bibliography.
+If you use this resource we would appreciate your citing our paper: https://ui.adsabs.harvard.edu/abs/2021arXiv210910503T/abstract 
 
